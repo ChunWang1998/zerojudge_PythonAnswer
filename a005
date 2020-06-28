@@ -1,0 +1,13 @@
+a = input()
+aa = int(a)
+
+while(aa):
+    aa -=1
+    b = [0]*100
+    b[0],b[1],b[2],b[3] = map(int,input().split())
+    if(b[1] - b[0] == b[2] - b[1]):
+        print(str(b[0])+' '+str(b[1])+' '+str(b[2])+' '+str(b[3])+' '+str(b[3]+b[3]-b[2]))
+    else:
+        s = b[3]*b[3]/b[2]
+        ss = int(s)
+        print(str(b[0])+' '+str(b[1])+' '+str(b[2])+' '+str(b[3])+' '+str(ss))
