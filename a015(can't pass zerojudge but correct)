@@ -1,0 +1,11 @@
+import numpy as np
+
+while True:
+    x,y = map(int,input().split())
+    line = [[0]*y]*x
+    for i in range(x):
+        line[i] = list(map(int,input().split(' '))) 
+    ans1 =  np.rot90(line,3,(0,1))
+    ans2 = np.fliplr(ans1)
+
+    print(ans2)
