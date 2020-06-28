@@ -1,0 +1,10 @@
+while True: # 无限循环 相当于 while(true)
+    try: # try
+       ss = input() # 读取一行的输入
+       s = int(ss)
+       if(s%400==0 or (s%4==0 and s%100!=0)):
+        print ("閏年")
+       else :
+        print ("平年")
+    except: # 当遇到文件终结的时候会扔出 EOFError
+        break # 跳出循环
