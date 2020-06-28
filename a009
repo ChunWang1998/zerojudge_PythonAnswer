@@ -1,0 +1,5 @@
+word = input()
+www=""
+for i in word:
+      www+=chr(ord(i)-7)
+print(www)
