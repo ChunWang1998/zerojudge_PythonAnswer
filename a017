@@ -1,0 +1,7 @@
+try:
+    while True:
+        x = input()
+        x = x.replace('/','//')
+        print( int(eval(x)))
+except EOFError:
+    pass
