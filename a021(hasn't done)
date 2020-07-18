@@ -1,29 +1,17 @@
  import math
 
 ainput,todo,binput = input().split()
-ainput = int(ainput)
-binput = int(binput)
-
-acnt = int (math.log10(ainput)) +1
-lista = [None]*acnt
-for s in range(acnt):
-    lista[s] = int(ainput%10)
-    ainput=int(ainput/10)
-#lista.reverse()
-
-bcnt = int (math.log10(binput)) +1
-listb = [None]*bcnt
-for s in range(bcnt):
-    listb[s] = int(binput%10)
-    binput=int(binput/10)
-#listb.reverse()
-
-if acnt > bcnt: cnt = acnt
-else cnt = bcnt
-
+if len(ainput)>len(binput): 
+    binput = "0"*(len(ainput)-len(binput))+binput
+    cnt = len(ainput)
+else : 
+    ainput = "0"*(len(binput)-len(ainput))+ainput
+    cnt = len(binput)
+result = "" 
+plus = 0
 if todo == '+' : 
-    for s in cnt:
-        
-elif todo == '-':
-elif todo == '*':
-elif todo == '/':
+    for s in range(cnt-1,-1,-1):
+        result = str((int(ainput[s])+int(binput[s]))%10+plus)+result
+        plus = int((int(ainput[s])+int(binput[s]))/10)
+#elif todo == '-':
+print(result)
