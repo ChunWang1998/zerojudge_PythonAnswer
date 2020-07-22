@@ -1,17 +1,15 @@
- import math
+import math
 
-ainput,todo,binput = input().split()
-if len(ainput)>len(binput): 
-    binput = "0"*(len(ainput)-len(binput))+binput
-    cnt = len(ainput)
-else : 
-    ainput = "0"*(len(binput)-len(ainput))+ainput
-    cnt = len(binput)
-result = "" 
-plus = 0
-if todo == '+' : 
-    for s in range(cnt-1,-1,-1):
-        result = str((int(ainput[s])+int(binput[s]))%10+plus)+result
-        plus = int((int(ainput[s])+int(binput[s]))/10)
-#elif todo == '-':
+astringinput,todo,bstringinput = input().split()
+ainput = int(astringinput)
+binput = int(bstringinput)
+result = ""
+if todo == '+':
+    result = ainput+binput
+elif todo == '-':
+    result = ainput-binput
+elif todo == '*':
+    result = ainput*binput
+elif todo == '/':
+    result = int(ainput//binput)
 print(result)
