@@ -1,0 +1,10 @@
+import sys
+for num in sys.stdin:
+    strlen = int((len(num)-1)/2)
+    ans = "yes"
+    for s in range(strlen):
+        check = len(num)-s-2
+        if num[s] != num[check] :
+            ans = "no"
+            break
+    print(ans)
