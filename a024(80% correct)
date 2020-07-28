@@ -1,0 +1,8 @@
+aa,bb = map(int,input().split())
+a = max(aa,bb)
+b = min(aa,bb)
+while a%b!=0 :
+    tmp = abs(a-b)
+    if a>b :a = tmp
+    else : b = tmp
+print(b)
