@@ -1,0 +1,21 @@
+#Q.1
+a = int(input())
+ans = 0
+for s in range(a+1):
+    ans+=s
+print(ans)
+
+#Q.4
+a,b = map(int,input().split())
+ans = 0
+cnt = 1
+for s in range(b):
+    ans +=cnt*a
+    cnt = cnt*10+1
+print(ans)
+
+#Q.13
+for s in range(1,10):
+    for q in range(1,10):
+        str = "%d x %d = %d"%(s,q,s*q)
+        print(str)
